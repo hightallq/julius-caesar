@@ -122,12 +122,12 @@ function closeModal() {
                 <h1>Julius Caesar</h1>
             </div>
             <ul class="nav_links" :class="{ show: isBurgerActive }">
-                <li><a href="#about">{{ $t('nav[0]') }}</a></li>
-                <li><a href="#benefits">{{ $t('nav[1]') }}</a></li>
-                <li><a href="#projects">{{ $t('nav[2]') }}</a></li>
-                <li><a href="#questions">{{ $t('nav[3]') }}</a></li>
-                <li><a href="#feedback">{{ $t('nav[4]') }}</a></li>
-                <li><a href="#contact">{{ $t('nav[5]') }}</a></li>
+                <li><a @click="toggleBurger" href="#about">{{ $t('nav[0]') }}</a></li>
+                <li><a @click="toggleBurger" href="#benefits">{{ $t('nav[1]') }}</a></li>
+                <li><a @click="toggleBurger" href="#projects">{{ $t('nav[2]') }}</a></li>
+                <li><a @click="toggleBurger" href="#questions">{{ $t('nav[3]') }}</a></li>
+                <li><a @click="toggleBurger" href="#feedback">{{ $t('nav[4]') }}</a></li>
+                <li><a @click="toggleBurger" href="#contact">{{ $t('nav[5]') }}</a></li>
             </ul>
             <div class="nav_translate">
                 <button @click="switchLang()">{{ buttonText }}</button>
@@ -141,7 +141,7 @@ function closeModal() {
     <main>
         <section id="about">
             <div class="about_bg" data-aos="fade-right">
-                <img src="https://bpb-us-e1.wpmucdn.com/sites.dartmouth.edu/dist/c/922/files/2019/11/julius-caesar.jpg"
+                <img src="/src/img/julius-caesar.webp"
                     alt="">
             </div>
             <div class="about_txt">
@@ -216,7 +216,7 @@ function closeModal() {
             <Swiper :modules="[Navigation, Pagination]" :slides-per-view="1" navigation pagination class="my-swiper">
                 <SwiperSlide class="swiper-slide">
                     <div class="bg-slide">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Cole_Thomas_The_Course_of_Empire_Destruction_1836.jpg"
+                        <img src="/src/img/Cole_Thomas_The_Course_of_Empire_Destruction_1836.webp"
                             alt="Slide 1" />
                         <h2>{{ $t('projectsSlides[0]') }}</h2>
                         <button class="project_button">{{ $t('projectsSlides[3]') }}</button>
@@ -224,7 +224,7 @@ function closeModal() {
                 </SwiperSlide>
                 <SwiperSlide class="swiper-slide">
                     <div class="bg-slide">
-                        <img src="https://eclecticlight.co/wp-content/uploads/2018/07/claudelorraincapriccioruinsforum.jpg"
+                        <img src="/src/img/claudelorraincapriccioruinsforum.webp"
                             alt="Slide 2" />
                         <h2>{{ $t('projectsSlides[1]') }}</h2>
                         <button class="project_button">{{ $t('projectsSlides[3]') }}</button>
@@ -232,7 +232,7 @@ function closeModal() {
                 </SwiperSlide>
                 <SwiperSlide class="swiper-slide">
                     <div class="bg-slide">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Cole_Thomas_The_Consummation_The_Course_of_the_Empire_1836.jpg"
+                        <img src="/src/img/Cole_Thomas_The_Consummation_The_Course_of_the_Empire_1836.webp"
                             alt="Slide 3" />
                         <h2>{{ $t('projectsSlides[2]') }}</h2>
                         <button class="project_button">{{ $t('projectsSlides[3]') }}</button>
@@ -281,12 +281,14 @@ function closeModal() {
                 <h2>{{ $t('reviews[0]') }}</h2>
                 <p>{{ $t('reviews[1]') }}</p>
             </div>
-            <Swiper :modules="[Autoplay]" :slides-per-view="2" autoplay class="feedback_slideshow" :breakpoints="{
+            <Swiper :modules="[Autoplay]" :slides-per-view="2" :space-between="16" :slides-per-group="2" :loop="true" :autoplay="{ delay: 3000, disableOnInteraction: false, }" class="feedback_slideshow" :breakpoints="{
                 0: {
-                    slidesPerView: 1
+                    slidesPerView: 1,
+                    slidesPerGroup: 1
                 },
                 768: {
-                    slidesPerView: 2
+                    slidesPerView: 2,
+                    slidesPerGroup: 2
                 }
             }">
                 <SwiperSlide class="feedback_slide">

@@ -260,7 +260,6 @@ section {
 
 .my-swiper {
     width: 80%;
-    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -273,6 +272,8 @@ section {
     justify-content: center;
     text-align: center;
     padding: 1rem;
+    will-change: transform;
+    height: 500px;
 }
 
 .bg-slide {
@@ -280,6 +281,7 @@ section {
     border-radius: 12px;
     color: #A00807;
     padding: 1rem;
+    overflow: hidden;
 }
 
 .swiper-slide img {
@@ -432,7 +434,7 @@ section {
     height: 250px;
     background-color: #f0f0f0;
     color: #222;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
 }
 
 .feedback_clientinfo {
