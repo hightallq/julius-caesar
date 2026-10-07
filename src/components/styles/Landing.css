@@ -434,7 +434,6 @@ section {
     height: 250px;
     background-color: #f0f0f0;
     color: #222;
-    /* margin: 0 1rem; */
 }
 
 .feedback_clientinfo {
@@ -538,7 +537,6 @@ section {
 /* CONTACT */
 
 #contact {
-    /* background-color: #710b71; */
     background: #D4B553;
     background: linear-gradient(0deg, rgba(212, 181, 83, 1) 0%, rgba(113, 11, 113, 1) 100%);
     color: #d4b553;

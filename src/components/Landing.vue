@@ -141,8 +141,7 @@ function closeModal() {
     <main>
         <section id="about">
             <div class="about_bg" data-aos="fade-right">
-                <img src="/src/img/julius-caesar.webp"
-                    alt="">
+                <img src="/src/img/julius-caesar.webp" alt="">
             </div>
             <div class="about_txt">
                 <h2>{{ $t('about[0]') }}</h2>
@@ -216,7 +215,7 @@ function closeModal() {
             <Swiper :modules="[Navigation, Pagination]" :slides-per-view="1" navigation pagination class="my-swiper">
                 <SwiperSlide class="swiper-slide">
                     <div class="bg-slide">
-                        <img src="/src/img/Cole_Thomas_The_Course_of_Empire_Destruction_1836.webp"
+                        <img src="/src/img/slide_1.webp"
                             alt="Slide 1" />
                         <h2>{{ $t('projectsSlides[0]') }}</h2>
                         <button class="project_button">{{ $t('projectsSlides[3]') }}</button>
@@ -224,7 +223,7 @@ function closeModal() {
                 </SwiperSlide>
                 <SwiperSlide class="swiper-slide">
                     <div class="bg-slide">
-                        <img src="/src/img/claudelorraincapriccioruinsforum.webp"
+                        <img src="/src/img/slide_2.webp"
                             alt="Slide 2" />
                         <h2>{{ $t('projectsSlides[1]') }}</h2>
                         <button class="project_button">{{ $t('projectsSlides[3]') }}</button>
@@ -232,7 +231,7 @@ function closeModal() {
                 </SwiperSlide>
                 <SwiperSlide class="swiper-slide">
                     <div class="bg-slide">
-                        <img src="/src/img/Cole_Thomas_The_Consummation_The_Course_of_the_Empire_1836.webp"
+                        <img src="/src/img/slide_3.webp"
                             alt="Slide 3" />
                         <h2>{{ $t('projectsSlides[2]') }}</h2>
                         <button class="project_button">{{ $t('projectsSlides[3]') }}</button>
@@ -281,16 +280,17 @@ function closeModal() {
                 <h2>{{ $t('reviews[0]') }}</h2>
                 <p>{{ $t('reviews[1]') }}</p>
             </div>
-            <Swiper :modules="[Autoplay]" :slides-per-view="2" :space-between="16" :slides-per-group="2" :loop="true" :autoplay="{ delay: 3000, disableOnInteraction: false, }" class="feedback_slideshow" :breakpoints="{
-                0: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1
-                },
-                768: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 2
-                }
-            }">
+            <Swiper :modules="[Autoplay]" :slides-per-view="2" :space-between="16" :slides-per-group="2" :loop="true"
+                :autoplay="{ delay: 3000, disableOnInteraction: false, }" class="feedback_slideshow" :breakpoints="{
+                    0: {
+                        slidesPerView: 1,
+                        slidesPerGroup: 1
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        slidesPerGroup: 2
+                    }
+                }">
                 <SwiperSlide class="feedback_slide">
                     <div class="feedback_clientinfo">
                         <div class="feedback_logo">
@@ -503,7 +503,7 @@ function closeModal() {
 
     <footer>
         <div class="copyrights">
-            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+            <p>&copy; 2026 My Portfolio. All rights reserved.</p>
         </div>
         <div class="media">
             <div>
